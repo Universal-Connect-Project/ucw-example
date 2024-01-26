@@ -7,6 +7,6 @@ pnpm-lock.yaml
 .idea
 .vscode
 
-# OS-specifi
+# OS-specific
 .DS_Store
 .Thumbs
