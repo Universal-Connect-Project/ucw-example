@@ -1,0 +1,12 @@
+node_modules
+
+pnpm-lock.yaml
+.env
+
+# Editors
+.idea
+.vscode
+
+# OS-specific
+.DS_Store
+.Thumbs
