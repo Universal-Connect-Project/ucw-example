@@ -1,0 +1,10 @@
+pnpm-lock.yaml
+.env
+
+# Editors
+.idea
+.vscode
+
+# OS-specifi
+.DS_Store
+.Thumbs
