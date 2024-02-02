@@ -2,7 +2,7 @@ FROM node:17
 
 WORKDIR /app
 
-COPY ./ ./
+COPY src ./
 
 RUN npm install 
 RUN npm install -g ts-node nodemon

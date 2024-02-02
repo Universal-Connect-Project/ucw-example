@@ -2,10 +2,10 @@
   "name": "sophtron-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node index.js"
+    "start": "ts-node src/index.js"
   },
   "author": "",
   "license": "ISC",
