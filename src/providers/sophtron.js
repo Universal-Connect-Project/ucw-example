@@ -20,6 +20,7 @@ module.exports = {
         break;
       case 'transactions':
         path = `customers/${userId}/accounts/${account_id}/transactions`;
+        break;
       default:
         break;
     }

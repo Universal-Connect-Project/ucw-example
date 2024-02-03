@@ -23,6 +23,7 @@ async function getVC(
         break;
       case 'transactions':
         path = `users/${userId}/accounts/${account_id}/transactions`;
+        break;
       default:
         break;
     }
