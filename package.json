@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No test specified\" && exit 0",
     "start": "ts-node src/index.js",
     "lint": "eslint ./src --fix --ext .js,.ts --ext src/public/static/vue3.js",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "prepare": "husky"
   },
   "author": "",
   "license": "ISC",
@@ -24,18 +26,18 @@
     "@typescript-eslint/eslint-plugin": "^6.20.0",
     "@typescript-eslint/parser": "^6.20.0",
     "eslint": "^8.56.0",
+    "husky": "^9.0.10",
     "lint-staged": "^15.2.1",
     "prettier": "^3.2.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
   "lint-staged": {
-    "{.babelrc,.eslintrc,.prettierrc}": [
-      "prettier --write --parser json"
+    "{.eslintrc.js,.prettierrc.js}": [
+      "prettier --write"
     ],
-    "*.{js,ts}": [
-      "npm run lint",
-      "git add"
+    "*.{js[x],ts[x]}": [
+      "npm run lint -- --cache --fix"
     ]
   }
 }
