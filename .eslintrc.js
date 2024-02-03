@@ -6,10 +6,13 @@ module.exports = {
     "es6": true
   },
   extends: [
-    'eslint:recommended'
+    'eslint:recommended'/*, 'plugin:@typescript-eslint/recommended'*/
   ],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
   parserOptions: {
-    ecmaVersion: "latest"
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
   ignorePatterns: ["src/public/static/vue3.js"],
   rules: {
