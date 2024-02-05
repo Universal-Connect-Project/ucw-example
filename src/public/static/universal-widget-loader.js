@@ -117,7 +117,6 @@ const sophtron = (function () {
             break;
           case 'INIT':
           case 'INSTITUTION_LIST':
-          case 'vcs/connect/stepChange':
           case 'vcs/connect/institutionSearch':
           case 'vcs/connect/loaded':
           case 'vcs/connect/memberStatusUpdate':
@@ -167,9 +166,11 @@ const sophtron = (function () {
 
   function messageHandler(msg){
     if(typeof msg.data === 'string'){
-      try{
+      try {
         return onMessage(JSON.parse(msg.data));
-      }catch{}
+      } catch {
+        return
+      }
     }
     return onMessage(msg.data);
   }

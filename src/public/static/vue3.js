@@ -1,3 +1,4 @@
+// eslint-disable
 var Vue = (function (exports) {
   'use strict';
 

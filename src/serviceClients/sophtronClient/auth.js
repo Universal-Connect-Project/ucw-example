@@ -12,7 +12,7 @@ class AuthClient {
     const ret = await http.post(config.SophtronAuthServiceEndpoint + path, data, {Authorization: phrase});
     return ret;
   }
-};
+}
 
 module.exports = {
   AuthClient

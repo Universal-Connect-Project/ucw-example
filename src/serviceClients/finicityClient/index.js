@@ -134,7 +134,7 @@ module.exports = class FinicityClient{
       })
       .then(res => res.data)
       .catch(err => {
-        logger.error(`Error at finicityClient.${method} ${path}`,  err?.response?.data)
+        logger.error(`Error at finicityClient.${method} ${url}`,  err?.response?.data)
       })
     return ret;
   }

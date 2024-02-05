@@ -9,16 +9,19 @@ module.exports = async function GetVc(
 ){
   let token = await vcClient.getIdToken(userId)
   switch(type){
-    case 'identity':
+    case 'identity': {
       let customer = await vcClient.getCustomerInfo(connection_id, token.id_token);
       return {credentialSubject: {customer}};
-    case 'accounts':
+    }
+    case 'accounts': {
       let accounts = await vcClient.getAccountInfo(connection_id, [], token.id_token);
       return {credentialSubject: {accounts}};
-    case 'transactions':
+    }
+    case 'transactions': {
       let allAccounts = await vcClient.getAccountInfo(connection_id, [], token.id_token);
       let accountId = (Object.values(allAccounts[0])[0]).accountId;
       const transactions = await vcClient.getTransactions(connection_id, accountId, token.id_token);
       return {credentialSubject: {transactions}};
+    }
   }
 }

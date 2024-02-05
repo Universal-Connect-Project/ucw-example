@@ -14,6 +14,7 @@
 // import * as logger from '../../infra/logger'
 
 import { Configuration } from "./configuration";
+// @ts-ignore
 import { RequiredError, RequestArgs } from "./base";
 import { AxiosInstance, AxiosResponse } from 'axios';
 

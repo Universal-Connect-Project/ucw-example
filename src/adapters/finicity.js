@@ -6,13 +6,13 @@ module.exports = {
   mapTransaction(t, accountId){
     // Deposit Transaction
     let key = 'depositTransaction'
-    switch(t.type){
+    // switch(t.type){
       // depositTransaction
       // loanTransaction
       // locTransaction
       // investmentTransaction
       // insuranceTransaction
-    }
+    // }
     return {
       [key]: {
         amount: t.amount,
