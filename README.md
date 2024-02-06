@@ -5,8 +5,25 @@ This repo is a demo server as an example of embedding the universal-connect-widg
 ## Try with the example website
 - Provide the required credentials in [src/config.js](src/config.js).
   `NOTE: please use envrionment variables to provide the api secrets` variable names are the keys in the `config.js`
-- Build and run the docker image.
-- Or `npm ci` and `npm run start` in `src` folder to get the server up
+
+### To run the example project:
+
+#### FIRST: Build the app. 
+
+You can use docker, or run the code from the command-line directly.
+
+Option 1: Build and run the docker image.
+
+```
+./build.sh
+./start-docker.sh
+```
+
+Or, run directly from the command-line:
+
+- `npm ci` and `npm run start` to start the example app
+
+#### THEN
 - Browse `http://localhost:8088/loader.html?env=http://localhost:8080`
 - A hosted example can be found [here](https://demo.universalconnectproject.org/loader.html?env=https://widget.universalconnectproject.org)
 
