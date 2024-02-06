@@ -8,6 +8,11 @@ This repo is a demo server as an example of embedding the universal-connect-widg
 
 ### To run the example project:
 
+#### FIRST: Get familiar with [dotenv](https://www.npmjs.com/package/dotenv)
+- Create your config file in the root of the project
+
+```cp ./.env.example ./.env```
+
 #### FIRST: Build the app. 
 
 You can use docker, or run the code from the command-line directly.
