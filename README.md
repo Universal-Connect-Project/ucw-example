@@ -2,16 +2,16 @@
 
 This repo is a demo server as an example of embedding the universal-connect-widget.
 
+## FIRST: Get familiar with [dotenv](https://www.npmjs.com/package/dotenv)
+- Create your config file in the root of the project
+
+```cp ./.env.example ./.env```
+
 ## Try with the example website
 - Provide the required credentials in [src/config.js](src/config.js).
   `NOTE: please use envrionment variables to provide the api secrets` variable names are the keys in the `config.js`
 
 ### To run the example project:
-
-#### FIRST: Get familiar with [dotenv](https://www.npmjs.com/package/dotenv)
-- Create your config file in the root of the project
-
-```cp ./.env.example ./.env```
 
 #### FIRST: Build the app. 
 
