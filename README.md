@@ -65,7 +65,7 @@ This project represents the underlying App/Wrapper, and setup instructions can b
 
 ### The Universal Connect Widget
 This project represents the UI of the Universal Connect Widget, and setup instructions can be found here:
-[universal-connect-widget README](https://github.com/Universal-Connect-Project/universal-connect-widget/blob/main/EXAMPLE.md)
+[universal-connect-widget SETUP README](https://github.com/Universal-Connect-Project/universal-connect-widget/blob/main/SETUP.md)
 
 *Please remember that secrets are passed through environment variables instead of hardcoded in the js file.*
 DO NOT put any credentials in any of the js files. If you do so, it could accidentally get committed and leaked to the public.
