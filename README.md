@@ -1,15 +1,13 @@
-# UCW Example Project
+# UCW Example
 
-This repo is a demo server as an example of embedding the universal-connect-widget. This repository is used in 
-conjunction with the [ucw-app](https://github.com/Universal-Connect-Project/ucw-app) repo, and the 
-[universal-connect-widget](https://github.com/Universal-Connect-Project/universal-connect-widget) repo.
+This is an overview of how to get the Universal Connet Widget up and running on your system.
 
 ## The Three Repos
 There are 3 services to start to get a widget demo running locally.
 
 They are:
 - https://github.com/Universal-Connect-Project/ucw-example - This repo, which provides a demo UI where the Widget is embedded.
-- https://github.com/Universal-Connect-Project/ucw-app - The API Layer.
+- https://github.com/Universal-Connect-Project/ucw-app - The App/Wrapper Layer.
 - https://github.com/Universal-Connect-Project/universal-connect-widget - The Universal Connect Widget UI.
 
 Each of these repositories can be run as a docker container, or from the command-line.
@@ -24,13 +22,13 @@ Get familiar with [dotenv](https://www.npmjs.com/package/dotenv)
 the application. Each config file (`.env`) is not saved to the repo, thus preventing sensitive information from being
 pushed into the repo.
 
-So, to begin, create your config file in the root of the project:
+So, to begin, _clone this repo_, and create your config file in the root of the project:
 
 ```
 cp ./.env.example ./.env
 ```
 
-### To run the example project:
+### To run this project:
 You can use docker, or run the code from the command-line directly.
 
 #### Option 1: 
@@ -40,7 +38,7 @@ Build and run the docker image.
 ./build.sh
 ./start-docker.sh
 ```
-*In your `.env` file, make sure values are encloses by quotes `"` or `'`, this is a limitation of docker*
+*In your `.env` file, make sure values are encloses by quotes `"` or `'`. This is a limitation of docker*
 
 #### Option 2: 
 Run the code directly from the command-line:
@@ -76,7 +74,10 @@ DO NOT put any credentials in any of the js files. If you do so, it could accide
 
 ## FINALLY
 Once you have all three repos running:
-- Browse `http://localhost:8088/loader.html?env=http://localhost:8080`
+- Browse to `http://localhost:8088/loader.html?env=http://localhost:8080`
+- Click the "Show" button to load the widget. 
+
+That's it! Congrats!
 
 A hosted example can be found [here](https://demo.universalconnectproject.org/loader.html?env=https://widget.universalconnectproject.org)
 
