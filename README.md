@@ -39,11 +39,13 @@ Use the `.env` file.
 *The `CryptoKey` and `CryptoIv` values are for encrypting the session token in order to not rely on cookies. They must be shared across server instances if there are multiple instances.*
 
 ### The Widget
-This project represents the Universal Connect Widget. The repo can be found here: [universal-connect-widget](https://github.com/Universal-Connect-Project/universal-connect-widget). 
-Once you have cloned this repo,
+The widget repo represents the Universal Connect Widget. The repo can be found here: [universal-connect-widget](https://github.com/Universal-Connect-Project/universal-connect-widget). 
+Once you have cloned the above repo:
 1. Run `npm ci` in the root.
 2. Then, start the dev server by running `npm run dev`. This will serve the client side code (browser) through port `3000`. 
 You can also opt to run this as a docker container, which will also serve the widget at port `3000`. See the repo README for more info.
+
+You can also run a docker image instead, which will also expose the widget on port `3000`.
 
 # Example Repo
 ## Try with the example website
