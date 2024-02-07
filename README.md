@@ -1,17 +1,91 @@
-# UCW Example Project
+# UCW Example
 
-This repo is a demo server as an example of embedding the universal-connect-widget.
+This is an overview of how to get the Universal Connet Widget up and running on your system.
 
-## Try with the example website
-- Provide the required credentials in [src/config.js](src/config.js).
-  `NOTE: please use envrionment variables to provide the api secrets` variable names are the keys in the `config.js`
-- Build and run the docker image.
-- Or `npm ci` and `npm run start` in `src` folder to get the server up
-- Browse `http://localhost:8088/loader.html?env=http://localhost:8080`
-- A hosted example can be found [here](https://demo.universalconnectproject.org/loader.html?env=https://widget.universalconnectproject.org)
+## The Three Repos
+There are 3 services to start to get a widget demo running locally.
+
+They are:
+- https://github.com/Universal-Connect-Project/ucw-example - This repo, which provides a demo UI where the Widget is embedded.
+- https://github.com/Universal-Connect-Project/ucw-app - The App/Wrapper Layer.
+- https://github.com/Universal-Connect-Project/universal-connect-widget - The Universal Connect Widget UI.
+
+Each of these repositories can be run as a docker container, or from the command-line.
+
+## First, start with this repo, the Example:
+
+## Example Repo
+
+### Set up your config file
+Get familiar with [dotenv](https://www.npmjs.com/package/dotenv)
+`ucw-app` and this example repo, both use a config file to run. The config files are used to provide sensitive info to
+the application. Each config file (`.env`) is not saved to the repo, thus preventing sensitive information from being
+pushed into the repo.
+
+So, to begin, _clone this repo_, and create your config file in the root of the project:
+
+```
+cp ./.env.example ./.env
+```
+Next, set up the values in the `.env` file:
+1. Acquire credentials for one of the supported aggregators (currently MX or Sophtron). To sign up with MX, go [here](https://dashboard.mx.com/sign_up).
+2. Fill in the relevant credentials in `./.env` file by following config options in [example/application/config.js](../example/application/config.js) (e.g., if you want to see `mx bank` working in the widget, `MxClientId` and `MxApiSecret` must be provided).
+3. Fill in the `UcpClientId`, `UcpClientSecret` and `UcpEncryptionKey` in the `./.env` file with the values provided by login page (the same values are used while setting up the App/Wrapper Server [ucw-app](https://github.com/Universal-Connect-Project/ucw-app)).
+
+### To run this project:
+You can use docker, or run the code from the command-line directly.
+
+#### Option 1: 
+Build and run the docker image.
+
+```
+./build.sh
+./start-docker.sh
+```
+*In your `.env` file, make sure values are encloses by quotes `"` or `'`. This is a limitation of docker*
+
+#### Option 2: 
+Run the code directly from the command-line:
+
+```
+npm ci
+```
+Followed by: 
+```
+npm run start
+```
+to start the example app
+
+## SECOND: The other two repos
+
+Each of these repos contains a README that outlines how to run the code. Please refer to their respective readmes to 
+continue with the set process for each repo.
+
+### The Universal Connect App
+This project represents the underlying App/Wrapper, and setup instructions can be found here: 
+[ucw-app README](https://github.com/Universal-Connect-Project/ucw-apphttps://github.com/Universal-Connect-Project/ucw-app/blob/main/README.md)
+
+### The Universal Connect Widget
+This project represents the UI of the Universal Connect Widget, and setup instructions can be found here:
+[universal-connect-widget SETUP README](https://github.com/Universal-Connect-Project/universal-connect-widget/blob/main/SETUP.md)
+
+*Please remember that secrets are passed through environment variables instead of hardcoded in the js file.*
+DO NOT put any credentials in any of the js files. If you do so, it could accidentally get committed and leaked to the public.
+
+*UCP credentials are required for authentication and secret exchange, storage (redis-like session cache) and analytics services.*
+
+*The `CryptoKey` and `CryptoIv` values are for encrypting the session token in order to not rely on cookies. They must be shared across server instances if there are multiple instances.*
+
+## FINALLY
+Once you have all three repos running:
+- Browse to `http://localhost:8088/loader.html?env=http://localhost:8080`
+- Click the "Show" button to load the widget. 
+
+That's it! Congrats!
+
+A hosted example can be found [here](https://demo.universalconnectproject.org/loader.html?env=https://widget.universalconnectproject.org)
 
 ## Deeper dive on widget usage
-
 This example demonstrates a client website that embeds the universal widget and retrieves data after a connection has been established through the widget.
 1. The `initWidget` function in [src/public/loader.html](src/public/loader.html) shows how a universal widget can be embedded into a webpage.
 
