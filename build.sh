@@ -1,3 +1,3 @@
-#!/bin/env bash
+#!/bin/bash
 
-docker build -t uvcs-demo ./src
+docker build -t ucw-example .
