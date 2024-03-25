@@ -29,7 +29,7 @@ cp ./.env.example ./.env
 ```
 Next, set up the values in the `.env` file:
 1. Acquire credentials for one of the supported aggregators (currently MX or Sophtron). To sign up with MX, go [here](https://dashboard.mx.com/sign_up).
-2. Fill in the relevant credentials in `./.env` file by following config options in [example/application/config.js](../example/application/config.js) (e.g., if you want to see `mx bank` working in the widget, `MxClientId` and `MxApiSecret` must be provided).
+2. Fill in the aggregator credentials in `./.env` file (e.g., if you want to see `mx bank` working in the widget, `MxClientId` and `MxApiSecret` must be provided).
 3. Fill in the `UcpClientId`, `UcpClientSecret` and `UcpEncryptionKey` in the `./.env` file with the values provided by login page (the same values are used while setting up the App/Wrapper Server [ucw-app](https://github.com/Universal-Connect-Project/ucw-app)).
 
 ### To run this project:

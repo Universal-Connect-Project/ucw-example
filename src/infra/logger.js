@@ -12,7 +12,7 @@ function startDoc() {
   return {
     Level: 'trace',
     Component: config.Component,
-    Env: config.Env || 'development',
+    Env: config.Env || 'dev',
     Request: {},
     '@timestamp': new Date().toISOString(),
   };
@@ -23,9 +23,7 @@ function logDoc(doc) {
     return;
   }
   if (
-    config.Env === 'dev' ||
-    config.Env === 'local' ||
-    config.Env === 'mocked'
+    ['dev', 'development', 'local', 'mocked'].includes(config.Env)
   ) {
     console.log(doc);
   } else {
