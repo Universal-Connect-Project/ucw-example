@@ -23,9 +23,7 @@ function logDoc(doc) {
     return;
   }
   if (
-    config.Env === 'dev' ||
-    config.Env === 'local' ||
-    config.Env === 'mocked'
+    ['dev', 'development', 'local', 'mocked'].includes(config.Env)
   ) {
     console.log(doc);
   } else {
