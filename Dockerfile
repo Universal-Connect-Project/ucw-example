@@ -6,7 +6,7 @@ RUN apk add --no-cache nodejs npm
 WORKDIR /app
 
 COPY package.json package-lock.json /app/
-RUN npm ci
+RUN npm ci --only=production
 
 COPY ./ ./
 
