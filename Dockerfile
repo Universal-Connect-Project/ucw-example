@@ -8,11 +8,12 @@ WORKDIR /app
 COPY package.json package-lock.json /app/
 RUN npm ci
 
-COPY src /app
+COPY ./ ./
 
 RUN npm install -g ts-node
 
 ENV Env prod
 
 EXPOSE 8088
-CMD ["ts-node", "app/index.js"]
+CMD ["ts-node", "src/index.js"]
+#CMD ["npm", "run", "start"]
