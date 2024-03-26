@@ -16,4 +16,3 @@ ENV Env prod
 
 EXPOSE 8088
 CMD ["ts-node", "src/index.js"]
-#CMD ["npm", "run", "start"]
