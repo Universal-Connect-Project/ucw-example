@@ -1,3 +1,3 @@
-#!/bin/env bash
+#!/bin/bash
 
-docker run -p8088:8080 -e Env=dev -e Port=8080 --env-file ${BASH_SOURCE%/*}/.env uvcs-demo
+docker run --name ucw-example --env-file .env ucw-example

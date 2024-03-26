@@ -1,13 +1,18 @@
-FROM node:17
+FROM alpine:3.19.1
+ENV NODE_VERSION 20.11.1
+
+RUN apk add --no-cache nodejs npm
 
 WORKDIR /app
 
-COPY src ./
+COPY package.json package-lock.json /app/
+RUN npm ci --only=production
 
-RUN npm install 
-RUN npm install -g ts-node nodemon
+COPY ./ ./
+
+RUN npm install -g ts-node
 
 ENV Env prod
 
-EXPOSE 8080
-CMD nodemon
+EXPOSE 8088
+CMD ["ts-node", "src/index.js"]
