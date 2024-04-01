@@ -38,9 +38,9 @@ You can use docker, or run the code from the command-line directly.
 #### Option 1: 
 Build and run the docker image.
 
+*This assumes you have [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) already installed.*
 ```
-./build.sh
-./start-docker.sh
+docker compose up
 ```
 *In your `.env` file, make sure values are encloses by quotes `"` or `'`. This is a limitation of docker*
 
