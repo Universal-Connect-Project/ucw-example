@@ -55,9 +55,7 @@ npm run start
 ```
 to start the example app
 
-## SECOND: The other repo
-
-This repo contains a README that outlines how to run the code.
+## SECOND: The other project
 
 ### The Universal Connect App
 This project represents the underlying App/Widget wrapper, and setup instructions can be found here: 
@@ -71,7 +69,7 @@ DO NOT put any credentials in any of the js files. If you do so, it could accide
 *The `CryptoKey` and `CryptoIv` values are for encrypting the session token in order to not rely on cookies. They must be shared across server instances if there are multiple instances.*
 
 ## FINALLY
-Once you have both repos running:
+Once you have both projects running:
 - Browse to `http://localhost:8088/loader.html?env=http://localhost:8080` *(If you change the ports in the .env file, you will need to change them in this link)*
 - Click the "Show" button to load the widget. 
 
