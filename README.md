@@ -1,14 +1,13 @@
 # UCW Example
 
-This is an overview of how to get the Universal Connet Widget up and running on your system.
+This is an overview of how to get the Universal Connect Widget up and running on your system.
 
-## The Three Repos
-There are 3 services to start to get a widget demo running locally.
+## The Two Repos
+There are 2 services to start to get a widget demo running locally.
 
 They are:
-- https://github.com/Universal-Connect-Project/ucw-example - This repo, which provides a demo UI where the Widget is embedded.
-- https://github.com/Universal-Connect-Project/ucw-app - The App/Wrapper Layer.
-- https://github.com/Universal-Connect-Project/universal-connect-widget - The Universal Connect Widget UI.
+- https://github.com/Universal-Connect-Project/ucw-example - This repo, which provides a demo UI client where the Widget is embedded.
+- https://github.com/Universal-Connect-Project/ucw-app - The App/Widget Layer.
 
 Each of these repositories can be run as a docker container, or from the command-line.
 
@@ -56,18 +55,11 @@ npm run start
 ```
 to start the example app
 
-## SECOND: The other two repos
-
-Each of these repos contains a README that outlines how to run the code. Please refer to their respective readmes to 
-continue with the set process for each repo.
+## SECOND: The other project
 
 ### The Universal Connect App
-This project represents the underlying App/Wrapper, and setup instructions can be found here: 
-[ucw-app README](https://github.com/Universal-Connect-Project/ucw-apphttps://github.com/Universal-Connect-Project/ucw-app/blob/main/README.md)
-
-### The Universal Connect Widget
-This project represents the UI of the Universal Connect Widget, and setup instructions can be found here:
-[universal-connect-widget SETUP README](https://github.com/Universal-Connect-Project/universal-connect-widget/blob/main/SETUP.md)
+This project represents the underlying App/Widget wrapper, and setup instructions can be found here: 
+[ucw-app README](https://github.com/Universal-Connect-Project/ucw-app/blob/main/README.md)
 
 *Please remember that secrets are passed through environment variables instead of hardcoded in the js file.*
 DO NOT put any credentials in any of the js files. If you do so, it could accidentally get committed and leaked to the public.
@@ -77,8 +69,8 @@ DO NOT put any credentials in any of the js files. If you do so, it could accide
 *The `CryptoKey` and `CryptoIv` values are for encrypting the session token in order to not rely on cookies. They must be shared across server instances if there are multiple instances.*
 
 ## FINALLY
-Once you have all three repos running:
-- Browse to `http://localhost:8088/loader.html?env=http://localhost:8080`
+Once you have both projects running:
+- Browse to `http://localhost:8088/loader.html?env=http://localhost:8080` *(If you change the ports in the .env file, you will need to change them in this link)*
 - Click the "Show" button to load the widget. 
 
 That's it! Congrats!
