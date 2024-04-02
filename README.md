@@ -59,7 +59,7 @@ to start the example app
 
 ### The Universal Connect App
 This project represents the underlying App/Widget wrapper, and setup instructions can be found here: 
-[ucw-app README](https://github.com/Universal-Connect-Project/ucw-apphttps://github.com/Universal-Connect-Project/ucw-app/blob/main/README.md)
+[ucw-app README](https://github.com/Universal-Connect-Project/ucw-app/blob/main/README.md)
 
 *Please remember that secrets are passed through environment variables instead of hardcoded in the js file.*
 DO NOT put any credentials in any of the js files. If you do so, it could accidentally get committed and leaked to the public.
