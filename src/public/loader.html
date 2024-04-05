@@ -158,6 +158,7 @@
             return true;
           },
           connect(){
+            this.data = null;
             this.finished = false;
             this.accounts = null;
             this.initWidget(this.action);
